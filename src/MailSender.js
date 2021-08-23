@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-     
+
 class MailSender {
   constructor() {
     this._transporter = nodemailer.createTransport({
@@ -14,13 +14,13 @@ class MailSender {
   }
   sendEmail(targetEmail, content) {
     const message = {
-      from: 'Notes Apps',
+      from: 'Songs Apps',
       to: targetEmail,
-      subject: 'Ekspor Catatan',
-      text: 'Terlampir hasil dari ekspor catatan',
+      subject: 'Ekspor Playlist',
+      text: 'Terlampir hasil dari ekspor playlist',
       attachments: [
         {
-          filename: 'notes.json',
+          filename: 'playlists.json',
           content,
         },
       ],
